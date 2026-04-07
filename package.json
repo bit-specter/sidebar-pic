@@ -1,0 +1,49 @@
+{
+  "name": "sidebar-pic",
+  "displayName": "Sidebar Pic: Mood Booster",
+  "publisher": "MEISDeveloper",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bit-specter/sidebar-pic"
+  },
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.107.1"
+  },
+  "contributes": {
+    "configuration": {
+      "title": "Sidebar Pic Settings",
+      "properties": {
+        "sidebarPic.title": {
+          "type": "string",
+          "default": "MY PHOTO",
+          "description": "Judul dropdown di Explorer Sidebar."
+        },
+        "sidebarPic.imageUrl": {
+          "type": "string",
+          "default": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+          "description": "URL foto penyemangat."
+        }
+      }
+    },
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "sidebarPicView",
+          "name": "PHOTO", 
+          "icon": "$(camera)"
+        }
+      ]
+    }
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.107.1",
+    "typescript": "^5.9.3"
+  }
+}
