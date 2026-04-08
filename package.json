@@ -2,7 +2,7 @@
   "name": "sidebar-pic",
   "displayName": "Sidebar Pic: Mood Booster",
   "publisher": "MEISDeveloper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/bit-specter/sidebar-pic"
@@ -41,7 +41,7 @@
         "sidebarPic.imageUrl": {
           "type": "string",
           "default": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
-          "description": "Image URL to display in the sidebar."
+          "description": "Direct image URL to display in the sidebar (not a search result page URL)."
         },
         "sidebarPic.localImagePath": {
           "type": "string",

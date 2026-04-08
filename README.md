@@ -54,6 +54,13 @@ This extension contributes the following settings, which can be accessed via `Fi
 
 ## 📝 Release Notes
 
+### 0.0.3
+
+* Improved image URL validation to prevent non-direct links (for example, Google image result page URLs).
+* Added a fallback message in the sidebar when an image cannot be loaded.
+* Reduced unnecessary re-renders/config writes to minimize loading flicker when selecting or clearing local images.
+* Clarified settings guidance that `sidebarPic.imageUrl` should be a direct image URL.
+
 ### 0.0.2
 
 * Added Command Palette support:
