@@ -2,7 +2,7 @@
   "name": "sidebar-pic",
   "displayName": "Sidebar Pic: Mood Booster",
   "publisher": "MEISDeveloper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/bit-specter/sidebar-pic"
@@ -12,18 +12,41 @@
     "vscode": "^1.107.1"
   },
   "contributes": {
+    "commands": [
+      {
+        "command": "sidebarPic.setTitle",
+        "title": "Sidebar Pic: Set Title"
+      },
+      {
+        "command": "sidebarPic.setImageUrl",
+        "title": "Sidebar Pic: Set Image URL"
+      },
+      {
+        "command": "sidebarPic.selectLocalImage",
+        "title": "Sidebar Pic: Select Local Image"
+      },
+      {
+        "command": "sidebarPic.clearLocalImage",
+        "title": "Sidebar Pic: Clear Local Image"
+      }
+    ],
     "configuration": {
       "title": "Sidebar Pic Settings",
       "properties": {
         "sidebarPic.title": {
           "type": "string",
           "default": "MY PHOTO",
-          "description": "Judul dropdown di Explorer Sidebar."
+          "description": "Title shown in the Explorer sidebar section."
         },
         "sidebarPic.imageUrl": {
           "type": "string",
           "default": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
-          "description": "URL foto penyemangat."
+          "description": "Image URL to display in the sidebar."
+        },
+        "sidebarPic.localImagePath": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Local image path. You can type it manually, or click [Browse image](command:sidebarPic.selectLocalImage) to choose a file from Explorer. To use URL mode again, click [Clear local image](command:sidebarPic.clearLocalImage). When this value is set, it takes priority over `sidebarPic.imageUrl`."
         }
       }
     },

@@ -8,6 +8,8 @@
 
 * **Custom Explorer View**: Adds a dedicated section within your VS Code Explorer.
 * **Highly Customizable**: Change the dropdown title and the image URL anytime via Settings.
+* **Command Palette Ready**: Quickly change title/URL or pick a local image from `Ctrl + Shift + P`.
+* **Local Image Support**: Use images from your own computer.
 * **Lightweight**: Optimized to ensure it doesn't impact your coding performance.
 * **Real-time Updates**: Changes in Settings are applied immediately without needing to restart VS Code.
 
@@ -28,6 +30,14 @@ This extension contributes the following settings, which can be accessed via `Fi
 
 * `sidebarPic.title`: Change the title that appears in the sidebar header (Default: `MY INSPIRATION`).
 * `sidebarPic.imageUrl`: Enter the URL of the image (Unsplash, Pinterest, or any direct image link) you want to display.
+* `sidebarPic.localImagePath`: Local image path chosen via Command Palette. If set, this is used instead of `sidebarPic.imageUrl`.
+
+### Commands (`Ctrl + Shift + P`)
+
+* `Sidebar Pic: Set Title`
+* `Sidebar Pic: Set Image URL`
+* `Sidebar Pic: Select Local Image`
+* `Sidebar Pic: Clear Local Image`
 
 ---
 
@@ -44,11 +54,22 @@ This extension contributes the following settings, which can be accessed via `Fi
 
 ## 📝 Release Notes
 
+### 0.0.2
+
+* Added Command Palette support:
+  * `Sidebar Pic: Set Title`
+  * `Sidebar Pic: Set Image URL`
+  * `Sidebar Pic: Select Local Image`
+  * `Sidebar Pic: Clear Local Image`
+* Added local image support (`sidebarPic.localImagePath`) with file picker workflow.
+* Added clickable Settings actions for browsing and clearing local image path.
+* Improved live update behavior when settings change.
+
 ### 0.0.1
 
 * Initial release of Sidebar Pic.
-* Integrated Webview View into the Explorer Sidebar.
-* Enabled Customizable Title and Image URL via VS Code Configuration.
+* Added a Webview View in Explorer sidebar.
+* Added configurable title and remote image URL.
 
 ---
 
